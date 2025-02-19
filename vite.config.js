@@ -5,6 +5,6 @@ import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
   
-  base: '/test1/',
+  base: '/serve_ad/',
   plugins: [vue()]
 });

@@ -41,7 +41,7 @@
             uidText.value = uid;
           } else {
             // Redirect to register_device route if no UID is found
-            router.push('/test1/register_device');
+            router.push('/serve_ad/register_device');
           }
         }, 500);
       };

@@ -18,10 +18,10 @@
     mounted() {
 
   
-      // Retrieve UID from cookie; if absent, redirect to /test1/register_device.
+      // Retrieve UID from cookie; if absent, redirect to /serve_ad/register_device.
       this.uid = this.getCookie("uid");
       if (!this.uid) {
-        window.location.href = '/test1/register_device';
+        window.location.href = '/serve_ad/register_device';
         return;
       }
   
@@ -76,12 +76,12 @@
         .then(response => response.json())
         .then(data => {
           if (data.name === 'Redirection') {
-            window.location.href = '/test1/register_device';
+            window.location.href = '/serve_ad/register_device';
             return null;
           } else if (data.name === 'Advertisement') {
             const dataString = JSON.stringify(data).toLowerCase();
             if (dataString.indexOf('ds.manager') !== -1) {
-              window.location.href = '/test1/register_device';
+              window.location.href = '/serve_ad/register_device';
               return null;
             } else {
               return data.url;
